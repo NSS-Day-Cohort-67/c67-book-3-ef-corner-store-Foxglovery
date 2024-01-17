@@ -49,11 +49,11 @@ public class CornerStoreDbContext : DbContext
 
         modelBuilder.Entity<Order>().HasData(new Order[]
         {
-            new Order {Id = 1, CashierId = 1},
-            new Order {Id = 2, CashierId = 5},
-            new Order {Id = 3, CashierId = 2},
-            new Order {Id = 4, CashierId = 4},
-            new Order {Id = 5, CashierId = 3},
+            new Order {Id = 1, CashierId = 1, PaidOnDate = new DateTime(2024, 1, 12)},
+            new Order {Id = 2, CashierId = 5, PaidOnDate = new DateTime(2024, 1, 13)},
+            new Order {Id = 3, CashierId = 2, PaidOnDate = new DateTime(2024, 1, 14)},
+            new Order {Id = 4, CashierId = 4, PaidOnDate = new DateTime(2024, 1, 11)},
+            new Order {Id = 5, CashierId = 3, PaidOnDate = new DateTime(2024, 1, 10)},
           
         });
 

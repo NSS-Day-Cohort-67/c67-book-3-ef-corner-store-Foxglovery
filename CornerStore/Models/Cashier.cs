@@ -11,5 +11,5 @@ public class Cashier
     public string LastName { get; set; }
     public string FullName => $"{FirstName} {LastName}";
     public ICollection<Order> Orders { get; set; }
-    
+
 }

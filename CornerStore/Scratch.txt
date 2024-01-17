@@ -1,0 +1,19 @@
+app.MapPost("/api/orders", (CornerStoreDbContext db, OrderCreateDTO orderDto) =>
+{
+    // Create a new order entity from the DTO
+    var order = new Order
+    {
+        CashierId = orderDto.CashierId,
+        PaidOnDate = orderDto.PaidOnDate,
+        OrderProducts = orderDto.OrderProducts.Select(op => new OrderProduct
+        {
+            ProductId = op.ProductId,
+            Quantity = op.Quantity
+        }).ToList()
+    };
+
+    db.Orders.Add(order);
+    db.SaveChanges();
+
+    return Results.Created($"/api/orders/{order.Id}", order);
+});
