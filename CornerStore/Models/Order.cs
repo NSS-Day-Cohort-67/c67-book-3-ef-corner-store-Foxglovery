@@ -9,7 +9,7 @@ public class Order
     
     public decimal? Total
     {
-        //Look at all these ?...it needed all of these to make it work. REMEMBER THAT
+        //Look at all these null checks(?)...it needed all of these to make it work. REMEMBER THAT
         get
         {
             if (OrderProducts != null)

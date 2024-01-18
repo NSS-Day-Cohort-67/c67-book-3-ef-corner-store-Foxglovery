@@ -75,10 +75,10 @@ app.MapGet("/api/cashiers/{id}", (CornerStoreDbContext db, int id) =>
                             Id = op.Product.Category.Id,
                             CategoryName = op.Product.Category.CategoryName
                         }
-                        // Add other Product properties as needed
+                        
                     }
                 }).ToList()
-                // Total is calculated within OrderDTO
+                
             }).ToList()
         })
         .FirstOrDefault();

@@ -10,5 +10,5 @@ public class ProductDTO
     public string Brand { get; set; }
     public int CategoryId { get; set; }
     public CategoryDTO Category { get; set; }
-    public ICollection<OrderProductDTO> OrderProducts { get; set; }
+    
 }
